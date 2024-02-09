@@ -13,7 +13,7 @@ router.get("/", characterCtrl.index);
 router.post("/", characterCtrl.create);
 
 // CHARACTER SHOW ROUTE
-router.get("/", characterCtrl.show);
+router.get("/:name", characterCtrl.show);
 
 // CHARACTER DELETE ROUTE
 router.delete("/:id", characterCtrl.delete);

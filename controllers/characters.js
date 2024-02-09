@@ -25,7 +25,8 @@ async function create(req, res, next) {
 // CHARACTER SHOW ACTION
 async function show(req, res, next) {
     try {
-        res.json(await Character.findById(req.params.id));
+        const characterName = req.params.name.replace(/-/g, ' '); 
+        res.json(await Character.findOne({name: characterName}));
     } catch (error) {
         res.status(400).json(error);
     }
