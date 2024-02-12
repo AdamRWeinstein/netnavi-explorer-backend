@@ -7,7 +7,8 @@ const CharacterSchema = new Schema({
     naviName: String,
     characterImagePath: String,
     naviImagePath: String,
-    description: String
+    description: String,
+    background: String
   },{timestamps: true});
   
   module.exports = mongoose.model("People", CharacterSchema);

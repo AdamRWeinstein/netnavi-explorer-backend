@@ -22,5 +22,3 @@ router.delete("/:id", characterCtrl.delete);
 router.put("/:id", characterCtrl.update);
 
 module.exports = router
-module.exports = router
-
