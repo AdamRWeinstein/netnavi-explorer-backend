@@ -10,6 +10,7 @@ const { PORT } = process.env;
 const express = require("express");
 const characterRouter = require('./routes/characters')
 const battleChipRouter = require('./routes/battlechips')
+const foldersRouter = require('./routes/folders')
 
 // create application object
 const app = express();
@@ -23,6 +24,7 @@ app.use(morgan("dev"));
 // all requests for endpoints that begin with '/character'
 app.use('/character', characterRouter)
 app.use('/battlechip', battleChipRouter)
+app.use('/folders', foldersRouter)
 
 // ROUTES
 // create a test route
