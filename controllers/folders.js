@@ -28,7 +28,7 @@ async function create(req, res) {
 // FOLDER SHOW ACTION
 async function show(req, res) {
     try {
-        const folder = await Folder.findOne({ _id: req.params.folderId, userCode: req.params.userCode });
+        const folder = await Folder.findOne({ _id: req.params.folderId, userCode: req.params.userCode }).populate('battleChips');
         if (!folder) {
             return res.status(404).json({ message: "Folder not found" });
         }
