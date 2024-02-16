@@ -7,18 +7,18 @@ const folderCtrl = require('../controllers/folders')
 // ROUTES
 
 // FOLDER INDEX ROUTE
-router.get("/:userCode", battleChipCtrl.index);
+router.get("/:userCode", folderCtrl.index);
 
 // FOLDER CREATE ROUTE
-router.post("/:userCode", battleChipCtrl.create);
+router.post("/:userCode", folderCtrl.create);
 
 // FOLDER SHOW ROUTE
-router.get("/:userCode/:folderId", battleChipCtrl.show);
+router.get("/:userCode/:folderId", folderCtrl.show);
 
 // FOLDER DELETE ROUTE
-router.delete("/:userCode/:folderId", battleChipCtrl.delete);
+router.delete("/:userCode/:folderId", folderCtrl.delete);
 
 // FOLDER UPDATE ROUTE
-router.put("/:userCode/:folderId", battleChipCtrl.update);
+router.put("/:userCode/:folderId", folderCtrl.update);
 
 module.exports = router

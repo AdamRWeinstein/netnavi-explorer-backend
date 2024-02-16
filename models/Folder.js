@@ -5,6 +5,7 @@ const BattleChip = require('./BattleChip')
 
 const FolderSchema = new Schema({
     userCode: String,
+    name: String,
     battleChips: [
         {
             type: Schema.Types.ObjectId,
