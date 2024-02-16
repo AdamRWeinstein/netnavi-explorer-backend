@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 
 // all requests for endpoints that begin with '/character'
 app.use('/character', characterRouter)
-app.use('/battlechip', battleChipRouter)
+app.use('/battlechips', battleChipRouter)
 app.use('/folders', foldersRouter)
 
 // ROUTES
