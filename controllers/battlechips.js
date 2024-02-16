@@ -7,7 +7,7 @@ const { BattleChip } = require('../models')
 // BATTLE CHIP INDEX ACTION
 async function index(req, res, next) {
     try {
-        res.json(await BattleChip.find({}));
+        res.json(await BattleChip.find({}).sort({ chipNo: 1 }));
     } catch (error) {
         res.status(400).json(error);
     }
